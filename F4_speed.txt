@@ -1,0 +1,79 @@
+================ RESTART ================= 
+SystemCoreClock	168000000
+GCC version	7.2.1
+
+sad_simple	831286	Ticks
+sad_simple	15.06	Ticks/Pixel 
+sad_simple	4948	uSeconds
+sad_simple CRC	A49CD9B7
+
+sad_block4	762336	Ticks
+sad_block4	13.81	Ticks/Pixel 
+sad_block4	4537	uSeconds
+sad_block4 CRC	A49CD9B7
+
+sad_simd4 	166440	Ticks
+sad_simd4 	 3.02	Ticks/Pixel 
+sad_simd4 	990	uSeconds
+sad_simd4  CRC	A49CD9B7
+
+sad_simd16	145767	Ticks
+sad_simd16	 2.64	Ticks/Pixel 
+sad_simd16	867	uSeconds
+sad_simd16 CRC	A49CD9B7
+
+mono_simple	608812	Ticks
+mono_simple	11.03	Ticks/Pixel 
+mono_simple	3623	uSeconds
+mono_simple CRC	D43902C3
+
+mono_block4	498451	Ticks
+mono_block4	 9.03	Ticks/Pixel 
+mono_block4	2966	uSeconds
+mono_block4 CRC	D43902C3
+
+mono_simd4 	138427	Ticks
+mono_simd4 	 2.51	Ticks/Pixel 
+mono_simd4 	823	uSeconds
+mono_simd4  CRC	D43902C3
+
+mono_simd16	110864	Ticks
+mono_simd16	 2.01	Ticks/Pixel 
+mono_simd16	659	uSeconds
+mono_simd16 CRC	D43902C3
+
+TIME: bitimg_build    	 6.90	Ticks/Pixel	2268	uSec
+bitimg_build CRC	B5B0D53E
+TIME: absdiff_mono    	 3.81	Ticks/Pixel	1250	uSec
+absdiff_mono CRC	B5B0D53E
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-06 16_05_10 bitimg_simd32.bmp
+File size: 	55194
+--------------------------
+TIME: bitimg_erode    	 0.73	Ticks/Pixel	241	uSec
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-06 16_05_10 bitimg_erode.bmp
+File size: 	55194
+--------------------------
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-06 16_05_11 mask.bmp
+File size: 	55194
+--------------------------
+TIME: bitimg_mask_bitcnt    	 0.79	Ticks/Pixel	259	uSec
+bitimg_mask_bitcnt return:	0
+intrusion_simple    	8	19.06	6262
+intrusion_simple    	201	19.06	6262
+intrusion_simple    	25284	19.06	6262
+intrusion_block4    	8	18.56	6098
+intrusion_block4    	201	18.56	6098
+intrusion_block4    	25284	18.56	6098
+intrusion_simd4     	8	 5.52	1812
+intrusion_simd4     	201	 5.52	1812
+intrusion_simd4     	25283	 5.52	1812
+intrusion_simd16    	8	 4.27	1401
+intrusion_simd16    	201	 4.27	1401
+intrusion_simd16    	25283	 4.27	1401
+done

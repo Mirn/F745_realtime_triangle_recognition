@@ -1,0 +1,28 @@
+memset_32bit_x8	0	    40996	 0.31
+memread_32bit_x8	32768	    77555	 0.59
+
+sdram_set_32bit_x8	0	  8630455	 1.03
+sdram_read_32bit_x8	2097152	 12848448	 1.53
+
+mcu_ram	5EA153F2	OK	   327804	 2.50
+sdram	DFBDB04A	OK	 22828063	 2.72
+
+BSP_LCD_Init;
+BSP_LCD_LayerDefaultInit;
+BSP_LCD_DisplayOn;
+BSP_LCD_SelectLayer;
+BSP_LCD_Clear;
+BSP_LCD_SetTransparency;
+BSP_LCD_GetXSize():	480
+BSP_LCD_GetYSize():	272
+
+memset_32bit_x8	0	    40973	 0.31
+memread_32bit_x8	32768	    77836	 0.59
+
+sdram_set_32bit_x8	0	 15377882	 1.83
+sdram_read_32bit_x8	2097152	 15259870	 1.82
+
+mcu_ram	5EA153F2	OK	   327834	 2.50
+sdram	DFBDB04A	OK	 25754807	 3.07
+
+

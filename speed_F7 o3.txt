@@ -1,0 +1,91 @@
+================= RESTART ================= 
+SystemCoreClock	216000000
+GCC version	7.2.1
+
+timgFrame_bmp_len	55194
+teststrB	ABCDEFGHJK01234567890
+dgb_cnt	123456
+
+test	imgFrame_bmp_len	55194
+test1
+test2
+sad_simple	795545	Ticks
+sad_simple	14.41	Ticks/Pixel 
+sad_simple	3683	uSeconds
+sad_simple CRC	A49CD9B7
+
+sad_block4	740312	Ticks
+sad_block4	13.41	Ticks/Pixel 
+sad_block4	3427	uSeconds
+sad_block4 CRC	A49CD9B7
+
+sad_simd4 	109704	Ticks
+sad_simd4 	 1.99	Ticks/Pixel 
+sad_simd4 	507	uSeconds
+sad_simd4  CRC	A49CD9B7
+
+sad_simd16	101946	Ticks
+sad_simd16	 1.85	Ticks/Pixel 
+sad_simd16	471	uSeconds
+sad_simd16 CRC	A49CD9B7
+
+mono_simple	288182	Ticks
+mono_simple	 5.22	Ticks/Pixel 
+mono_simple	1334	uSeconds
+mono_simple CRC	D43902C3
+
+mono_block4	246786	Ticks
+mono_block4	 4.47	Ticks/Pixel 
+mono_block4	1142	uSeconds
+mono_block4 CRC	D43902C3
+
+mono_simd4 	69098	Ticks
+mono_simd4 	 1.25	Ticks/Pixel 
+mono_simd4 	319	uSeconds
+mono_simd4  CRC	D43902C3
+
+mono_simd16	60495	Ticks
+mono_simd16	 1.10	Ticks/Pixel 
+mono_simd16	280	uSeconds
+mono_simd16 CRC	D43902C3
+
+TIME: bitimg_build    	 9.58	Ticks/Pixel	2446	uSec
+bitimg_build CRC	BA1C51F1
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-09 15_16_46 bitimg.bmp
+File size: 	55194
+--------------------------
+TIME: absdiff_mono    	 4.54	Ticks/Pixel	1159	uSec
+absdiff_mono CRC	F7AF9094
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-09 15_16_47 bitimg_simd32.bmp
+File size: 	55194
+--------------------------
+TIME: bitimg_erode    	 0.43	Ticks/Pixel	109	uSec
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-09 15_16_48 bitimg_erode.bmp
+File size: 	55194
+--------------------------
+<12>ÅEvP˝ÅE
+--------------------------
+Saved to:  	log_files\2018-07-09 15_16_48 mask.bmp
+File size: 	55194
+--------------------------
+TIME: bitimg_mask_bitcnt    	 0.79	Ticks/Pixel	201	uSec
+bitimg_mask_bitcnt return:	0
+intrusion_simple    	8	17.63	4505
+intrusion_simple    	201	17.63	4505
+intrusion_simple    	25284	17.64	4507
+intrusion_block4    	8	16.89	4314
+intrusion_block4    	201	17.14	4378
+intrusion_block4    	25284	16.89	4314
+intrusion_simd4     	8	 4.91	1255
+intrusion_simd4     	201	 4.92	1256
+intrusion_simd4     	25283	 4.92	1256
+intrusion_simd16    	8	 4.35	1112
+intrusion_simd16    	201	 4.36	1113
+intrusion_simd16    	25283	 4.36	1113
+done
