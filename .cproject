@@ -77,7 +77,6 @@
 									<listOptionValue builtIn="false" value="../src/cmsis_boot"/>
 									<listOptionValue builtIn="false" value="../src/kiss/inc"/>
 									<listOptionValue builtIn="false" value="../src/usart_lib"/>
-									<listOptionValue builtIn="false" value="../src/cmsis_lib/include_inline"/>
 									<listOptionValue builtIn="false" value="../src"/>
 									<listOptionValue builtIn="false" value="../src/hal/include"/>
 									<listOptionValue builtIn="false" value="../src/img_data"/>

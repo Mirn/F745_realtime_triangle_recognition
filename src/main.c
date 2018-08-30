@@ -6,6 +6,7 @@
 #include "stm32746g_discovery_camera.h"
 #include "stm32746g_discovery_lcd.h"
 #include "stm32746g_discovery_ts.h"
+#include "stm32746g_discovery_qspi.h"
 
 #include "sysFastMemCopy.h"
 #include "memtest.h"
@@ -376,6 +377,55 @@ void main(void)
 	HAL_EnableFMCMemorySwapping();  printf("HAL_EnableFMCMemorySwapping();\n");
 	printf("\n");
 
+	BSP_QSPI_Init();
+	QSPI_Info info;
+	BSP_QSPI_GetInfo(&info);
+	printf("BSP_QSPI_GetStatus()          %i\n", BSP_QSPI_GetStatus());
+	printf("QSPI_Info.FlashSize           %i\n", info.FlashSize);
+	printf("QSPI_Info.EraseSectorSize     %i\n", info.EraseSectorSize);
+	printf("QSPI_Info.EraseSectorsNumber  %i\n", info.EraseSectorsNumber);
+	printf("QSPI_Info.ProgPageSize        %i\n", info.ProgPageSize);
+	printf("QSPI_Info.ProgPagesNumber     %i\n", info.ProgPagesNumber);
+	printf("\n");
+
+	BSP_QSPI_EnableMemoryMappedMode();
+	printf("BSP_QSPI_EnableMemoryMappedMode():OK\n");
+
+	uint8_t *ptr = (uint8_t *)0x90000000;
+	//send_file("qspi_mm.bin", ptr, info.FlashSize);
+	//printf("qspi send ok\n");
+
+	static uint8_t tmp[0x10000]  __attribute__ ((section (".data_big"), used));
+	uint32_t t0 = DWT_CYCCNT;
+	sysFastMemCopy((uint8_t *)tmp, (const uint8_t *)0x20000000, sizeof(tmp));
+	t0 = DWT_CYCCNT - t0;
+
+	uint32_t t1 = DWT_CYCCNT;
+	sysFastMemCopy((uint8_t *)tmp, (const uint8_t *)ptr_SDRAM, sizeof(tmp));
+	t1 = DWT_CYCCNT - t1;
+
+	uint32_t t2 = DWT_CYCCNT;
+	sysFastMemCopy((uint8_t *)tmp, (const uint8_t *)ptr, sizeof(tmp));
+	t2 = DWT_CYCCNT - t2;
+	printf("%i\t%i\t%i\n", t0, t1, t2);
+
+
+//	send_file_header("qspi.bin", info.FlashSize);
+//	uint32_t pos = 0;
+//	uint8_t buf[256];
+//	while (pos < info.FlashSize)
+//	{
+//		BSP_QSPI_Read(buf, pos, sizeof(buf));
+//		send_block(buf, sizeof(buf));
+//		pos += sizeof(buf);
+//	}
+//	printf("qspi send ok\n");
+
+
+	while (1)
+		__WFI();
+
+#ifdef disabled
 #ifndef disabled
 	LCD_Config();
 	BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
@@ -480,5 +530,6 @@ void main(void)
 	}
 
 	img_test_main();
+#endif
 #endif
 }
